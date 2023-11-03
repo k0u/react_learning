@@ -7,7 +7,7 @@ import Feed from "./components/Feed";
 import Auth from "./components/Auth";
 
 const App: React.FC = () => {
-  const user = userSelector(selectUser);
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
   useEffect(() => {
     const unSUb = auth.onAuthStateChanged((authUser) => {
